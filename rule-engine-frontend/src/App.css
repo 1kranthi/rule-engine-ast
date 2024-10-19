@@ -14,15 +14,53 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: url('https://plus.unsplash.com/premium_photo-1668708034541-4ba9a33fae3a?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA==');
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* align-items: center; /* Remove this line */
+  justify-content: flex-start; /* Align items to the top */
+  
+  min-height: 100vh; /* Ensure it takes the full viewport height */
   color: white;
+  padding-top: 60px; /* Space for the fixed navbar */
 }
+
+nav {
+  background-color: rgba(0, 0, 0, 0.7); /* Navbar background color */
+  position: fixed; /* Keep navbar fixed at the top */
+  top: 0; /* Position at the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  padding: 10px 0; /* Padding for navbar */
+  z-index: 1000; /* Ensure it’s on top of other elements */
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the links horizontally */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+nav li {
+  margin: 0 15px; /* Space between each link */
+}
+
+nav a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Text color */
+  font-size: 18px; /* Font size */
+}
+
+nav a:hover {
+  color: #61dafb; /* Change color on hover */
+}
+
 
 .App-link {
   color: #61dafb;

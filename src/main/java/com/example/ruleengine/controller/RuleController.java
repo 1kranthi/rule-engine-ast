@@ -5,6 +5,7 @@ import com.example.ruleengine.ast.Node;
 import com.example.ruleengine.entity.Rule;
 import com.example.ruleengine.service.RuleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
@@ -70,6 +71,18 @@ public class RuleController {
             return ResponseEntity.badRequest().body(false);
         }
     }
+
+     /**
+     * Endpoint to get all rules from the database.
+     * 
+     * @return List of all rules.
+     */
+    @GetMapping
+    public ResponseEntity<List<Rule>> getAllRules() {
+        List<Rule> rules = ruleService.getAllRules();
+        return new ResponseEntity<>(rules, HttpStatus.OK);
+    }
+
 
     /**
      * DTO for evaluation requests.
