@@ -48,33 +48,33 @@ The frontend provides a user-friendly interface for interacting with the backend
 
     • Port: The frontend runs on port 3000.
     
-Setup Instructions
-
+Setup Instructions for Rule Engine Application
+Prerequisites
+    • Java 17+: Ensure you have Java installed. You can verify by running:
+      java -version
+    • Maven: Ensure you have Maven installed. You can verify by running:
+      mvn -version
 1. Clone the Repository
-git clone <repository-url>
-cd rule-engine-app
-
-2. Backend Setup (Spring Boot)
-    • Step 1: Navigate to the backend directory.
-cd backend
-    • Step 2: Build and run the Spring Boot application.
+git clone https://github.com/1kranthi/rule-engine-ast.git
+cd rule-engine-ast
+2. Install Dependencies (Maven)
+If you haven’t already installed Maven, follow these steps:
+    • On Windows:
+        1. Download the latest Maven binary zip archive from Maven's official website.
+        2. Unzip the archive to your preferred location.
+        3. Add the bin directory to your system PATH.
+    • On Linux/Unix:
+      sudo apt update
+      sudo apt install maven
+3. Build the Backend 
+If you have the JAR file ready, you can skip this step. However, if you need to build from source:
+cd rule-engine-ast
 mvn clean install
-mvn spring-boot:run
-    • The backend server will run on http://localhost:8080.
-
-
-4. Frontend Setup (React.js)
-    • Step 1: Navigate to the frontend directory.
-cd rule-engine-frontend
-    • Step 2: Install the dependencies.
-npm install
-npm install react-router-dom
-
-    • Step 3: Start the frontend.
-npm start
-    • The frontend server will run on http://localhost:3000.
-
-   
-6. Access the Application
-    • Open the application in your browser: http://localhost:3000.
-    • The frontend interacts with the backend services running on port 8080.
+4. Run the Backend Application
+    1. Navigate to the target directory where the JAR file is located:
+       cd rule-engine-ast/target
+    2. Run the JAR file:
+       java -jar rule-engine-ast-0.0.1-SNAPSHOT.jar
+       The backend server will run on http://localhost:8080.
+5. Access the Application
+Open the application in your browser at http://localhost:8080.
