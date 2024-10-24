@@ -48,7 +48,7 @@ const Navbar = () => {
     <nav style={navbarStyle}>
       <h1 style={titleStyle}>Rule Engine App</h1>
       <ul style={listStyle}>
-        {['/Create', '/Combine', '/Cvaluate', '/Rules'].map((path, index) => (
+        {['/Create', '/Combine', '/Evaluate', '/Rules'].map((path, index) => (
           <li key={index} style={itemStyle}>
             <Link
               to={path}
